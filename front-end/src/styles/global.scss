@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white: #fff;
+    --background: #f2f3f5;
+    --gray-line: #DCDDE8;
+    --text: #666666;
+    --text-highlight: #B3B9FF;
+    --title: #2E384D;
+    --red: #E83F5B;
+    --green: #4CD62B;
+    --blue: #5965E0;
+    --blue-dark: #4953B8;
+    --blue-twitter: #2AA9EE;
+}
+
+@media(max-width: 1080px){
+    html{
+        font-size: 93.75%; //tamanho base é 16px 1rem -> 16x0,9375 = 15 ou seja para estes ecras eu estou diminuindo 1px ao tamnho do font-size e todos os elementos que usem rem na minha aplicação
+    }
+}
+@media(max-width: 720px){ //tamanho mobile para baixo
+    html{
+        font-size: 87.5%; 
+    }
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+body, input, textarea, button {
+    font: 400 1rem "Inter", sans-serif; //1rem é 16px que é o valor inicial entao a partir daqui todos os elementos podem ser alterados caso sigam o rem
+}
+
+button{
+    cursor: pointer; //por defeito nao coloca cursor nos botoes o html
+}
+
+a{
+    color: inherit; //herda cor do container onde ta o link, mantem a mesma cor no texto
+    text-decoration: none;
+}
+
+@media(max-width: 1080px){
+    html{
+        font-size: 93,75%; //16x0,9375 = 15 ou seja para estes ecras eu estou diminuindo 1px ao tamnho do font-size mas pode ser para todos os elementos que usem rem na minha aplicação
+    }
+}
+
+
+.container{
+    height: 100vh; //ocupa o total da altura mais que a %
+    max-width: 992px;
+    margin: 0 auto; // cnetralizar tudo
+    padding: 2.5rem 2rem;
+    display: flex;
+
+    flex-direction: column; //por padrao é row, columcamos porque queremos os elementos abaixo da experience bar, 1 abaixo do outro,1 do lado do outro é row
+}
+
+.experience-bar{
+    display: flex;
+    align-items: center;
+}
+
+.experience-bar span{
+    font-size: 1rem;
+}
+
+.experience-bar > div{ //pega a primeira div apenas, dentro da experience bar
+    flex: 1; //ocupar largura maxima do container
+    height: 4px;
+    border-radius: 4px;
+    background: var(--gray-line);
+    margin: 0 1.5rem; //20px nas laterais
+    position: relative;
+}
+
+.experience-bar > div > div{ 
+    height: 4px;
+    border-radius: 4px;
+    background: var(--green);
+}
+
+span.current-experience{
+    position: absolute;
+    top: 12px;
+    
+}
+
+

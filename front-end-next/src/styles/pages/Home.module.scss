@@ -1,0 +1,18 @@
+.container{
+    height: 100vh; //ocupa o total da altura mais que a %
+    max-width: 992px;
+    margin: 0 auto; // cnetralizar tudo
+    padding: 2.5rem 2rem;
+    display: flex;
+
+    flex-direction: column; //por padrao é row, columcamos porque queremos os elementos abaixo da experience bar, 1 abaixo do outro,1 do lado do outro é row
+}
+
+.container section{
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr; //2 colunas em que cada uma delas ocupam o mesmo tamanho, 50% do tamanho horizontal possivel
+  gap: 6.25rem; //espaçamento entre elas de 6.25rem ou seja 6.25*16px = 100px
+  align-content: center; //todo o conteudo do grid alinhado ao centro verticalmente
+    
+}
